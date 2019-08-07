@@ -60,3 +60,5 @@ gem 'activeadmin-mongoid', '0.9.0'
 gem 'ransack-mongoid', github: 'activerecord-hackery/ransack-mongoid'
 
 gem 'devise'
+
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
