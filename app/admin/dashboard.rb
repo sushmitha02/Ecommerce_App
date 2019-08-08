@@ -28,5 +28,9 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
     # end
-  end # content
+  end 
+
+  content do
+    render partial: 'layouts/banner'
+  end
 end
