@@ -62,3 +62,7 @@ gem 'ransack-mongoid', github: 'activerecord-hackery/ransack-mongoid'
 gem 'devise'
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails', '~> 6.0'
