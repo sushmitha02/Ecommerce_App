@@ -1,17 +1,22 @@
 <div class="container margin-top">
-  <div class="row">
+	<div class="row">
+		<div class="col-md-7">
+			
+		</div>
 
-    <div class="col-md-5">
-      <h1><%= @product.title %></h1>
+		<div class="col-12 col-sm-4 col-md-4">
+			<h1><%= @product.title %></h1>
 
-      <hr>
+			<hr>
 
-      <em><%= @product.description %></em>
+			<p><%= @product.description %></p><br>
 
-      <p><%=  @product.price %></p>
+			<p>Price: $<%=  @product.price %></p>
 
-      <hr>
-    
-    </div>
-  </div>
+			<%= link_to 'Back', products_path %>
+
+
+		</div>
+
+	</div>
 </div>
