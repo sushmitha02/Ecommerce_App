@@ -8,5 +8,6 @@ class Product
 
 	validates :title, :description,:price, :presence => true
 	validates :title, uniqueness: true
-    validates :price, uniqueness: true, format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
+	validates_numericality_of :price, :greater_than => 0, :less_than => 1000000   
+    validates_format_of :price, :with => /\A\d+(?:\.\d{0,2})?\z/
 end
