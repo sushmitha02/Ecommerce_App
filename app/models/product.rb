@@ -3,8 +3,8 @@ class Product
 	field :title, type: String
 	field :description, type: String
 	field :price, type: Float
-	field :main_image, type: String
-	field :thumb_image, type: String
+	field :main_image, type: Array
+	field :thumb_image, type: Array
 
 	validates :title, :description,:price, :presence => true
 	validates :title, uniqueness: true
