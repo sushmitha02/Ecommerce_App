@@ -4,8 +4,10 @@
 <%= render 'products/banner' %>
 
 <h1>Products</h1>
-<a href="">
-		<% @products.each do |product| %>
+
+	
+	<% @products.each do |product| %>
+	<a href="/products/<%= product.id %>">
 		<div class="card">
 			<img src="http://via.placeholder.com/250x250"
 			class="card-img-top" alt="...">
@@ -16,7 +18,5 @@
 				</p>
 			</div>
 		</div>
-		<% end %>
-</a>
-
-	<%= render 'shared/application_footer' %>
+	</a>
+	<% end %>
