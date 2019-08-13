@@ -5,15 +5,14 @@
 <h1>Products</h1>
 
 <% @products.each do |product| %>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+<div class="card">
+  <img src="http://via.placeholder.com/250x250"
+ class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">
-      <h2><%= product.title %></h2>
+      <h3><%= product.title %></h3>
       <p><%= product.price %></p>
     </p>
   </div>
 </div>
 <% end %>
-
-<%= link_to 'New Product', new_product_path %>
