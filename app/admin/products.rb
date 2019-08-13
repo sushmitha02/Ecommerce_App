@@ -11,8 +11,8 @@ ActiveAdmin.register Product do
 			f.input :title
 			f.input :description
 			f.input :price
-			f.input :main_image
-			f.input :thumb_image
+			f.input :main_image, as: :file
+			f.input :thumb_image, as: :file
 
 		end
 		f.semantic_errors
