@@ -1,18 +1,22 @@
 <p id="notice"><%= notice %></p>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <%= render 'products/banner' %>
 
 <h1>Products</h1>
+<a href="">
+		<% @products.each do |product| %>
+		<div class="card">
+			<img src="http://via.placeholder.com/250x250"
+			class="card-img-top" alt="...">
+			<div class="card-body">
+				<p class="card-text">
+					<h3><%= product.title %></h3>
+					<p>price: $<%= product.price %></p>
+				</p>
+			</div>
+		</div>
+		<% end %>
+</a>
 
-<% @products.each do |product| %>
-<div class="card">
-  <img src="http://via.placeholder.com/250x250"
- class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">
-      <h3><%= product.title %></h3>
-      <p><%= product.price %></p>
-    </p>
-  </div>
-</div>
-<% end %>
+	<%= render 'shared/application_footer' %>
