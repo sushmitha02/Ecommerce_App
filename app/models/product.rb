@@ -6,6 +6,9 @@ class Product
 	field :main_image, type: Array
 	field :thumb_image, type: Array
 
+	mount_uploader :thumb_image, ImageUploader
+	mount_uploader :main_image, ImageUploader
+
 	validates :title, :description,:price, :presence => true
 	validates :title, uniqueness: true
 	validates_numericality_of :price, :greater_than => 0, :less_than => 1000000   

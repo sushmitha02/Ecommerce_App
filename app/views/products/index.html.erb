@@ -9,8 +9,7 @@
 	<% @products.each do |product| %>
 	<a href="/products/<%= product.id %>">
 		<div class="card">
-			<img src="http://via.placeholder.com/250x250"
-			class="card-img-top" alt="...">
+			  <%= image_tag product_img(product.thumb_image_url, 'thumb') unless product.thumb_image.nil? %>
 			<div class="card-body">
 				<p class="card-text">
 					<h3><%= product.title %></h3>
