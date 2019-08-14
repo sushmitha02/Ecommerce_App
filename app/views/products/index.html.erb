@@ -5,17 +5,19 @@
 
 <h1>Products</h1>
 
+<div class="container">
 	<% @products.each do |product| %>
 	<a href="/products/<%= product.id %>">
 
-		<div class="card shadow-sm">
+		<div class="card">
 			  <%= image_tag product_img(product.thumb_image_url, 'thumb') %>
 			<div class="card-body">
 				<p class="card-text">
-					<h3><%= product.title %></h3>
+					<h4><%= product.title %></h4>
 					<p>price: $<%= product.price %></p>
 				</p>
 			</div>
 		</div>
 	</a>
 	<% end %>
+</div>
