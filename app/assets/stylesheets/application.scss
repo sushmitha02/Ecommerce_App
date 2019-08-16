@@ -240,3 +240,27 @@ body {
   margin-top: 6rem;
     color: black;
 }
+
+@media (min-width: 350px) 
+  and (max-width: 370px) {
+      .col-12 .card {
+        width: auto;
+        padding: 1.5rem;
+      }
+  } 
+
+  @media (min-width: 320px) 
+  and (max-width: 380px) {
+      .col-12 .card {
+        width: auto;
+        padding: 1.25rem;
+      }
+  } 
+
+  @media (min-width: 320px) 
+  and (max-width: 415px) {
+      .col-12 .card {
+        width: auto;
+        padding: 2.25rem;
+      }
+  } 
