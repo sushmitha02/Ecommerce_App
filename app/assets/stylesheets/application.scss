@@ -93,6 +93,7 @@ div .card {
    .card {
     margin-bottom: 2rem;
     border: 0;
+    padding: 3rem;
     height: auto;
     margin-left: 1rem;
   }
@@ -105,6 +106,24 @@ div .card {
     border: none;
   }
 }
+@media screen and (max-width:360px) {
+   .card {
+    margin-bottom: 2rem;
+    border: 0;
+    padding: 3rem;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .card > img {
+    margin-bottom: .75rem;
+
+  }
+  div .card {
+    border: none;
+  }
+}
+
 
 
 @media only screen 
@@ -207,4 +226,17 @@ body {
 }
 .home{
   margin-top: 4rem;
+}
+
+.login{
+  margin-top: 6rem;
+    color: black;
+}
+.register{
+  margin-top: 6rem;
+    color: black;
+}
+.pass{
+  margin-top: 6rem;
+    color: black;
 }

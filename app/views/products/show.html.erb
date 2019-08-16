@@ -13,9 +13,8 @@
 			<p><%= @product.description %></p><br>
 
 			<p>Price: $<%=  @product.price %></p>
-                <button type="button" class="btn btn-info btn-lg">Add to Cart</button>
-                <button type="button" class="btn btn-info btn-lg">Buy Now</button><br>
-                <hr>
+		        <%= link_to 'Add to Cart', pages_cart_path, class: "btn btn-lg btn-primary center" %>
+                <%= link_to 'Buy Now', pages_cart_path, class: "btn btn-lg btn-primary center" %>                <hr>
                 <%= link_to 'Back', products_path %>
 
 
