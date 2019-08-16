@@ -1,10 +1,10 @@
 <div class="container margin-top">
 	<div class="row">
-		<div class="col-12 col-sm-7 col-md-7">
+		<div class="col-12 col-sm-6 col-md-6">
 			<%= render 'shared/product_banner' %>
 		</div>
 
-		<div class="col-12 col-sm-4 col-md-4">
+		<div class="col-12 col-sm-5 col-md-5">
 			<h1><%= @product.title %></h1>
 
 			<hr>
@@ -12,8 +12,9 @@
 			<p><%= @product.description %></p><br>
 
 			<p>Price: $<%=  @product.price %></p>
-
-			<%= link_to 'Back', products_path %>
+                <button type="button" class="btn btn-info">Add to Cart</button>
+                <button type="button" class="btn btn-info">Buy Now</button><br>
+                <%= link_to 'Back', products_path %>
 
 
 		</div>
