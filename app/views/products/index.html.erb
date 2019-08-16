@@ -1,16 +1,22 @@
 <p id="notice"><%= notice %></p>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<%= render 'products/banner' %>
-
-<h1>Products</h1>
-
-	<% @products.each do |product| %>
-	<div class= "card text-center ml-5">
-	<a href= "/products/<%=product.id%>"><%= image_tag product_img(product.thumb_image_url, 'thumb') %></a>
-	<p class= "card-text">
-		<span ><%= link_to product.title, product_path(product) %></span>
-		<p><span style="color:blue ">Price: $<%= link_to product.price, product_path(product), style: "color:blue" %></span></p>
-	</p>
+<div class="row">
+	<div class="col-12">
+		<%= render 'products/banner' %>
+	</div>
 </div>
-<% end %>
+<div class="row">
+	<div class="col-12">
+		<h1>Products</h1>
+
+		<% @products.each do |product| %>
+		<div class= "card text-center ml-5">
+			<a href= "/products/<%=product.id%>"><%= image_tag product_img(product.thumb_image_url, 'thumb') %></a>
+			<p class= "card-text">
+				<span ><%= link_to product.title, product_path(product) %></span>
+				<p><span style="color:blue ">Price: $<%= link_to product.price, product_path(product), style: "color:blue" %></span></p>
+			</p>
+		</div>
+		<% end %>
+	</div>
+</div>
