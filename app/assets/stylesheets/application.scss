@@ -1,9 +1,30 @@
 @import "bootstrap";
 
+/*
+ * Base structure
+ */
+body {
+  height: 100%;
+}
+body {
+  color: black;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+.col-md-6 {
+  text-align: center;
+  line-height: 2.0; 
+}
+
+.btn-primary{
+    margin-top: 0px;
+}
+
+
  .card {
     float: left;
     width: auto;
-    padding: 0rem  ;
+    padding: 2rem  ;
     margin-bottom: 2rem;
     border: 0;
     height: auto;
@@ -78,7 +99,7 @@ body {
   clear: both;
     position: relative;
     height: 200px;
-    margin-top: -25px;
+    margin-top: 0px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
