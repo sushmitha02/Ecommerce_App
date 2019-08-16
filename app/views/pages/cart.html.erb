@@ -10,6 +10,8 @@
 		<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary center" %>
 		<% else %>
 		<%= link_to 'Login', new_user_session_path, class: "btn btn-lg btn-primary center" %> &nbsp;
+		<br>
+		<hr>
 		<%= link_to 'Register', new_user_registration_path, class: "btn btn-lg btn-primary center" %>
 		<% end %>
 	</div>
