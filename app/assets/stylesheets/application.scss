@@ -1,15 +1,85 @@
 @import "bootstrap";
-.card {
-  float: left;
-  width: 33.333%;
-  padding: .75rem;
-  margin-bottom: 2rem;
-  border: 0;
+
+/*
+ * Base structure
+ */
+body {
+  height: 100%;
+}
+body {
+  color: black;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+.col-md-6 {
+  text-align: center;
+  line-height: 2.0; 
+}
+
+.btn-primary{
+    margin-top: 0px;
 }
 
 
+ .card {
+    float: left;
+    width: auto;
+    padding: 2rem  ;
+    margin-bottom: 2rem;
+    border: 0;
+    height: auto;
+  }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .card {
+    float: left;
+    width: auto;
+    padding: 17rem ;
+    margin-bottom: 2rem;
+    border: 0;
+    height: auto;
+  }
+
+  .card > img {
+    margin-bottom: .75rem;
+
+  }
+  div .card {
+    border: none;
+  }
+}
+
+@media only screen 
+  and (max-device-width: 1024px) 
+   {
+  .card {
+    float: left;
+    width: auto;
+    padding: 0rem  ;
+    margin-bottom: 2rem;
+    border: 0;
+    height: auto;
+  }
+
+  .card > img {
+    margin-bottom: .75rem;
+
+  }
+  div .card {
+    border: none;
+  }
+}
+
 .card-text {
   font-size: 85%;
+}
+.card img{
+  text-align: center;
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
 }
 
 body {
@@ -24,9 +94,12 @@ body {
   text-align: center;
 }
 
-.footer-style {
+.mastfoot {
   text-align: center;
-  color: black;
+  clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: 0px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
