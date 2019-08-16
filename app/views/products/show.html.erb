@@ -1,6 +1,6 @@
 <div class="mt-5">
   <div class="row">
-    <div class="col-12 col-sm-6 col-md-6">
+    <div class="col-12 col-sm-5 col-md-5">
       <%= render 'shared/product_banner' %>
     </div>
 
@@ -13,7 +13,7 @@
 
       <p>Price: $<%=  @product.price %></p>
       <%= link_to 'Add to Cart', pages_cart_path, class: "btn btn-lg btn-primary center" %>
-      <%= link_to 'Buy Now', pages_cart_path, class: "btn btn-lg btn-primary center" %>                <hr>
+      <%= link_to 'Buy Now', new_user_session_path, class: "btn btn-lg btn-primary center" %>                <hr>
       <%= link_to 'Back', products_path %>
 
 
