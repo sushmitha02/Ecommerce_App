@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>EcommerceApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>EcommerceApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <div class="container-fluid">
-      <%= render 'layouts/header' %>
-    </div>
-    <%= yield %>
-  <div class="container-fluid">
-      <%= render 'shared/application_footer'%>
+<body>
+    <%= render 'layouts/header' %>
+  <div class="container-fluid my-4">
+    <div class="row">
+      <div class="col-12">
+        <%= yield %>
       </div>
-
-  </body>
+    </div>
+    <%= render 'shared/application_footer'%>
+  </div>
+</body>
 </html>
