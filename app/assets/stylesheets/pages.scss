@@ -1,33 +1,13 @@
 @import "bootstrap";
 
-/*
- * Base structure
- */
 body {
-  height: 100%;
+	height: 100%;
 }
 body {
-  color: black;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-}html,
-body {
-  height: 100%;
-}
-body {
-  text-align: center;
+	text-align: center;
 }
 
-
-/ Padding for spacing /
-.inner {
-  padding-top: 8rem;
-  padding: 6rem;
-  text-align: center;
-  color: #5CB298;
-  margin-top:  6rem;
-}
-#background-image {
+.background-image {
   position :fixed;
   top: 50%;
   left: 50%;
@@ -38,18 +18,14 @@ body {
   z-index: -400;
   -webkit-transform: translateX(-30%) translateY(-70%);
   transform: translateX(-50%) translateY(-50%);
-  background-image: url("https://www.lifeofpix.com/wp-content/uploads/2019/02/308-name06330-jj-1600x805.jpg");
+  background: image-url('cover.jpg') no-repeat;
   background-size: cover;
 }
 @media  (max-width: 768px) {
-.container {
-	text-align: center;
-	position: fixed;
-}
-}
-
-.row img {
-	margin-top: -11rem;
+	.container {
+		text-align: center;
+		position: fixed;
+	}
 }
 
 @media only (max-device-width: 370px) {
@@ -63,4 +39,18 @@ body {
 		font-size: 1rem;
 	}
 
+}
+
+
+ .contact {
+    margin-top: 4rem;
+    color: black;
+  }
+.about{
+  margin-top: 4rem;
+    color: black;
+}
+.cart{
+  margin-top: 4rem;
+    color: black;
 }
