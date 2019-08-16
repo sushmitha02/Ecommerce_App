@@ -10,6 +10,26 @@ body {
   color: black;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+} 
+
+@media  (max-width: 768px) {
+.container {
+  text-align: center;
+  position: fixed;
+}
+}
+
+@media only (max-device-width: 370px) {
+  .col-md-9 {
+    font-size: 1rem;
+  }
+
+}  
+@media only (max-device-width: 412px) {
+  .col-md-9 {
+    font-size: 1rem;
+  }
+
 }
 .col-md-6 {
   text-align: center;
@@ -21,14 +41,30 @@ body {
 }
 
 
+ /* Bootstrap cards*/
+
  .card {
     float: left;
     width: auto;
-    padding: 2rem  ;
+    padding: 2rem;
     margin-bottom: 2rem;
-    border: 0;
+    border: 0 none;
     height: auto;
   }
+
+.card-text {
+  font-size: 88%;
+}
+.card img {
+    border-style: none;
+    height: 12rem;
+    width: 12rem;
+    object-fit: contain;
+  }
+div .card {
+    border: none;
+}
+
 
 @media only screen 
   and (min-device-width: 768px) 
@@ -51,16 +87,13 @@ body {
   }
 }
 
-@media only screen 
-  and (max-device-width: 1024px) 
-   {
-  .card {
-    float: left;
-    width: auto;
-    padding: 0rem  ;
+
+@media screen and (max-width:513px) {
+   .card {
     margin-bottom: 2rem;
     border: 0;
     height: auto;
+    margin-left: 1rem;
   }
 
   .card > img {
@@ -72,15 +105,50 @@ body {
   }
 }
 
-.card-text {
-  font-size: 85%;
+
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .card {
+    float: left;
+    width: auto;
+    padding: 0rem  ;
+    margin-bottom: 2rem;
+    border: 0;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .card > img {
+    margin-bottom: .75rem;
+
+  }
+  div .card {
+    border: none;
+  }
 }
-.card img{
-  text-align: center;
-  width: 12rem;
-  height: 12rem;
-  object-fit: contain;
+@media only screen 
+  and (max-device-width: 5036px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .card {
+    float: left;
+    width: auto;
+    padding: 0rem  ;
+    margin-bottom: 2rem;
+    border: 0;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .card > img {
+    margin-bottom: .75rem;
+
+  }
+  div .card {
+    border: none;
+  }
 }
+
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
@@ -131,4 +199,24 @@ body {
     carousel-item: image-url('carousel2.png') no-repeat;
   carousel-item: image-url('carousel3.png') no-repeat;
 
+}
+
+
+ .contact {
+    margin-top: 4rem;
+    color: black;
+  }
+.about{
+  margin-top: 4rem;
+    color: black;
+}
+.cart{
+  margin-top: 4rem;
+    color: black;
+}
+.product{
+  margin-top: 5rem;
+}
+.home{
+  margin-top: 4rem;
 }

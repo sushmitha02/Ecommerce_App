@@ -25,12 +25,4 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
-production:
-  clients:
-    default:
-      database: <%= ENV['DB_NAME'] %>
-      hosts: <%= ENV ['MONGODB_URI'] %>
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+
