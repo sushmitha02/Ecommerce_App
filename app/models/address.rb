@@ -8,8 +8,11 @@ class Address
 	field :state, type: String
 	field :pincode, type: String
 
+	embedded_in :user
+
+
 	validates :name, presence: true
-	validates :phone, presence: true,format: {with: /\A^(\+91[\-\s]?)\d{10}$\Z/ },length: { minimum: 10,maximum:13 }
+	validates :phone_no, presence: true,format: {with: /\A^(\+91[\-\s]?)\d{10}$\Z/ },length: { minimum: 10,maximum:13 }
 	validates :address1, presence: true
 	validates :address2, presence: true
 	validates :state, presence: true
