@@ -1,5 +1,4 @@
 class AddressesController < InheritedResources::Base
-	layout 'address'
 
 	def index
 		@addresses = Address.all
