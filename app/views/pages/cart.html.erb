@@ -5,13 +5,6 @@
 
 	<br>
 
-	<% if user_signed_in? %>
-		<%= link_to current_user.email, user_session_path(current_user) %> &nbsp;
-		<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary center" %>
-		<% else %>
 		<%= link_to 'Login', new_user_session_path, class: "btn btn-lg btn-primary center" %> &nbsp;
-		<br>
-		<hr>
-		<%= link_to 'Register', new_user_registration_path, class: "btn btn-lg btn-primary center" %>
-		<% end %>
-	</div>
+		
+</div>
