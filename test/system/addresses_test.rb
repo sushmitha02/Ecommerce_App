@@ -3,13 +3,13 @@ require "application_system_test_case"
 class AddressesTest < ApplicationSystemTestCase
   test "visiting the index" do
     visit addresses_url
-  
     assert_selector "h1", text: "Addresses"
   end
 
   test "creating a Address" do
     visit addresses_url
     click_on "New Address"
+
 
     fill_in "Address1", with: @address.address1
     fill_in "Address2", with: @address.address2
@@ -18,6 +18,7 @@ class AddressesTest < ApplicationSystemTestCase
     fill_in "Phone no", with: @address.phone_no
     fill_in "Pincode", with: @address.pincode
     fill_in "State", with: @address.state
+
     click_on "Create Address"
 
     assert_text "Address was successfully created"
@@ -49,6 +50,4 @@ class AddressesTest < ApplicationSystemTestCase
 
     assert_text "Address was successfully destroyed"
   end
-  
-
 end
