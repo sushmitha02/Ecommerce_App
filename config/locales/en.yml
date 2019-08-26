@@ -30,4 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  mongoid:
+      attributes:
+        address:
+          name: "Address name"
+          address1: "Address_no1"
