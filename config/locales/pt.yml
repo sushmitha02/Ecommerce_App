@@ -1,0 +1,11 @@
+pt:
+  mongoid:
+      attributes:
+        address:
+          name: "പേര്"
+          phone_no: "ഫോൺ നമ്പർ"
+          address1: "വിലാസം 1"
+          address2: "വിലാസം 2"
+          city: "നഗരം"
+          state: "സംസ്ഥാനം"
+          pincode: "പിൻ കോഡ്"
