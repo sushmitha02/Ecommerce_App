@@ -7,14 +7,14 @@ class ProductsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Products"
   end
 
-  test "creating a Product" do
+  test "creating a New Product" do
     visit products_path
     
     click_on "New Product"
     
-    fill_in "Title", with: "Creating an Product"
-    fill_in "Price", with: "Creating an Product"
-    fill_in "Description", with: "Created this product successfully!"
+    fill_in "Title", with: "Web Design"
+    fill_in "Price", with: "152.78"
+    fill_in "Description", with: "A collection of recipes for solid Ruby on Rails applications. Extracted from dozens of production apps and 10,000+ hours of deliberate Ruby on Rails practice since 2005."
     
     click_on "Create Product"
     
