@@ -1,44 +1,42 @@
 require "application_system_test_case"
 
 class AddressesTest < ApplicationSystemTestCase
-  setup do
-    @address = addresses(:one)
-  end
-
   test "visiting the index" do
     visit addresses_url
     assert_selector "h1", text: "Addresses"
   end
 
-  test "creating a Address" do
+  test "creating a New Address" do
     visit addresses_url
-    click_on "New Address"
+    click_link "New Address"
 
-    fill_in "Address1", with: @address.address1
-    fill_in "Address2", with: @address.address2
-    fill_in "City", with: @address.city
-    fill_in "Name", with: @address.name
-    fill_in "Phone no", with: @address.phone_no
-    fill_in "Pincode", with: @address.pincode
-    fill_in "State", with: @address.state
-    click_on "Create Address"
+
+    fill_in "Address_no1", with: "vd xsgbt"
+    fill_in "Address2", with: "hbtgdhyju"
+    fill_in "City", with: "efrsbgh"
+    fill_in "Address name", with: "sushmi"
+    fill_in "Phone no", with: "+918959568734"
+    fill_in "Pincode", with: "2345"
+    fill_in "State", with: "fhtj"
+
+    click_on "Add Address"
 
     assert_text "Address was successfully created"
-    click_on "Back"
+    click_link "Back"
   end
 
   test "updating a Address" do
     visit addresses_url
-    click_on "Edit", match: :first
+    click_link "Edit", match: :first
 
-    fill_in "Address1", with: @address.address1
-    fill_in "Address2", with: @address.address2
-    fill_in "City", with: @address.city
-    fill_in "Name", with: @address.name
-    fill_in "Phone no", with: @address.phone_no
-    fill_in "Pincode", with: @address.pincode
-    fill_in "State", with: @address.state
-    click_on "Update Address"
+    fill_in "Address_no1", with: "vd xsgbt1"
+    fill_in "Address2", with: "hbtgdhyju2"
+    fill_in "City", with: "efrsbghh"
+    fill_in "Address name", with: "sushmih"
+    fill_in "Phone no", with: "+918959568737"
+    fill_in "Pincode", with: "23456"
+    fill_in "State", with: "fhtjh"
+    click_on "Add Address"
 
     assert_text "Address was successfully updated"
     click_on "Back"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :addresses
   devise_for :users
   get 'pages/contact', to: 'pages#contact'
