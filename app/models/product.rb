@@ -16,6 +16,9 @@ class Product
 
 	before_validation :method1
 	after_validation :method2
+
+	before_create :method3
+	after_create :just_created
 	
 	private
 
@@ -25,6 +28,16 @@ class Product
 
 	def method2
 		puts "After validation "
+	end
+
+	def method3
+		puts "about to create"
+	end
+
+	def just_created
+	  puts "just created a product" if title_changed?
+	  puts self.title = title.downcase
+		puts self.title = title.upcase
 	end
 
 end
