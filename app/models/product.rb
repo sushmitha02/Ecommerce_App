@@ -23,7 +23,7 @@ class Product
 	before_save :before_save
 	after_save :after_save
 
-	before_destroy :before_destroy_action
+  before_destroy :before_destroy_action
 	after_destroy :after_destroy_action
 	
 	after_update :after_update
@@ -69,12 +69,12 @@ class Product
 		puts "#{self.title}" if previous_changes['title'].any?
   end
 
-	def before_destroy_action
-		puts 'Product needs to be destroyed'
-	end
+  def before_destroy_action
+  	puts "Needs to be destroyed"
+  end
 
 	def after_destroy_action
-		puts 'Product destroyed'
+		puts "#{self.id} destroyed"
 	end
 
 	def create_welcome_notification
