@@ -22,6 +22,9 @@ class Product
 
 	before_save :before_save
 	after_save :after_save
+
+	before_destroy :before_destroy_action
+	after_destroy :after_destroy_action
 	
 	private
 
@@ -53,6 +56,14 @@ class Product
 
 	def after_save
 		puts "Products saved"
+	end
+
+	def before_destroy_action
+		puts 'Product needs to be destroyed'
+	end
+
+	def after_destroy_action
+		puts 'Product destroyed'
 	end
 
 end
