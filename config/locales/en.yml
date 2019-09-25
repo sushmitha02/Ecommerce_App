@@ -33,5 +33,5 @@ en:
   mongoid:
       attributes:
         address:
-          name: "Address name"
-          address1: "Address_no1"
+          name: "Username"
+          address1: "Address"

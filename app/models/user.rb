@@ -1,5 +1,7 @@
 class User
   include Mongoid::Document
+
+  after_create :welcome_user
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -17,6 +19,12 @@ class User
 
   ## Rememberable
   field :remember_created_at, type: Time
+
+  private
+
+  def welcome_user
+    UserMailerWorker.perform_async(self.id)
+  end
 
   ## Trackable
   # field :sign_in_count,      type: Integer, default: 0

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'user/index'
   resources :addresses
   devise_for :users
   get 'pages/contact', to: 'pages#contact'
