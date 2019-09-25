@@ -12,5 +12,19 @@ class Product
 	validates :title, :description,:price, :presence => true
 	validates :title, uniqueness: true
 	validates_numericality_of :price, :greater_than => 0, :less_than => 1000000   
-    validates_format_of :price, :with => /\A\d+(?:\.\d{0,2})?\z/
+	validates_format_of :price, :with => /\A\d+(?:\.\d{0,2})?\z/
+
+	before_validation :method1
+	after_validation :method2
+	
+	private
+
+	def method1
+		puts "Called Before validation"
+	end
+
+	def method2
+		puts "After validation "
+	end
+
 end
