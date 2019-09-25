@@ -19,6 +19,9 @@ class Product
 
 	before_create :method3
 	after_create :just_created
+
+	before_save :before_save
+	after_save :after_save
 	
 	private
 
@@ -42,6 +45,14 @@ class Product
 	  puts "just created a product" if title_changed?
 	  puts self.title = title.downcase
 		puts self.title = title.upcase
+	end
+
+	def before_save
+		puts "Products before save"
+	end
+
+	def after_save
+		puts "Products saved"
 	end
 
 end
