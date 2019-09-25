@@ -28,6 +28,10 @@ class Product
 	
 	after_update :after_update
 
+	after_touch :create_welcome_notification, on: :create
+	after_initialize :after_initialize
+	after_find :after_find
+
 	private
 
 	def method1
@@ -72,5 +76,17 @@ class Product
 	def after_destroy_action
 		puts 'Product destroyed'
 	end
+
+	def create_welcome_notification
+    puts "Welcome to Trika!"
+  end
+
+  def after_initialize
+  	puts "You have initialized an object!"
+  end
+
+  def after_find
+    puts "You have found an object!"
+  end
 
 end
