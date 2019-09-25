@@ -26,6 +26,8 @@ class Product
 	before_destroy :before_destroy_action
 	after_destroy :after_destroy_action
 	
+	after_update :after_update
+
 	private
 
 	def method1
@@ -57,6 +59,11 @@ class Product
 	def after_save
 		puts "Products saved"
 	end
+
+	def after_update
+		puts "Updated"
+		puts "#{self.title}" if previous_changes['title'].any?
+  end
 
 	def before_destroy_action
 		puts 'Product needs to be destroyed'
