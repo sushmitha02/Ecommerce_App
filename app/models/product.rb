@@ -27,7 +27,11 @@ class Product
 	end
 
 	def method2
-		puts "After validation "
+		if self.errors.any?
+			puts "title already taken"
+		else
+			puts "Called After validation"
+		end
 	end
 
 	def method3
